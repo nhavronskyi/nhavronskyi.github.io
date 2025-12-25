@@ -1,3 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}"
+
 # Nazar Havronskyi
 
 ## About
