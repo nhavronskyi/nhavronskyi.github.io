@@ -1,0 +1,37 @@
+.bg-light-blue-grey {
+    background-color: #eef1f5;
+}
+
+.btn-custom {
+    background-color: #000;
+    color: #fff;
+    border-radius: 0;
+    padding: 12px 40px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-custom:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #000;
+}
+
+.social-icon {
+    color: #000;
+    font-size: 1.8rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #555;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}

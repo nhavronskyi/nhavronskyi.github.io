@@ -1,0 +1,116 @@
+---
+layout: default
+title: Nazar Havronskyi - Portfolio
+---
+
+<link href='/assets/css/landing.css' rel="stylesheet">
+<script>
+    function calculateYearsOfExperience() {
+        const startDate = new Date(2024, 2);
+        const now = new Date();
+
+        const monthsDiff = (now.getFullYear() - startDate.getFullYear()) * 12 +
+            (now.getMonth() - startDate.getMonth());
+
+        return Math.ceil(monthsDiff / 12).toString();
+    }
+</script>
+
+<div class="container-fluid p-0">
+    <div class="row g-0 min-vh-100">
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center bg-white p-5 order-1">
+
+            <div class="mb-4">
+                <img alt="Profile"
+                     class="profile-img"
+                     src='/assets/images/profile.jpg'>
+            </div>
+
+            <h1 class="font-mono display-6 fw-bold mb-1 text-uppercase">
+                Nazar Havronskyi_
+            </h1>
+
+            <p class="fs-5 fw-bold mb-4 text-dark">
+                Java Software Engineer
+            </p>
+
+            <div class="input-group mb-4" style="max-width: 400px;">
+                <div class="form-control border-dark rounded-0 font-mono text-secondary d-flex align-items-center"
+                     id="emailTextDisplay"
+                     style="background-color: #fff; border-right: 0;">
+                    nhavronskyi@gmail.com
+                </div>
+
+                <button class="btn btn-outline-dark border-start-0 rounded-0"
+                        onclick="copyTextFromElement('emailTextDisplay')"
+                        style="border-color: #000;"
+                        title="Copy to clipboard"
+                        type="button">
+                    <i class="fa-regular fa-copy" id="copyIcon"></i>
+                </button>
+
+                <a class="btn btn-custom border-dark" href="mailto:nhavronskyi@gmail.com">
+                    Email me
+                </a>
+            </div>
+
+            <script>
+                function copyTextFromElement(elementId) {
+                    const element = document.getElementById(elementId);
+                    const textToCopy = element.textContent.trim();
+
+                    const icon = document.getElementById("copyIcon");
+
+                    navigator.clipboard.writeText(textToCopy)
+                        .then(() => {
+                            icon.classList.remove("fa-copy");
+                            icon.classList.add("fa-solid", "fa-check");
+
+                            setTimeout(function () {
+                                icon.classList.remove("fa-solid", "fa-check");
+                                icon.classList.add("fa-regular", "fa-copy");
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Could not copy text: ', err);
+                            alert('Copying failed. Please copy the email manually.');
+                        });
+                }
+            </script>
+            <div class="d-flex gap-4">
+                <a class="social-icon" href="https://www.linkedin.com/in/nazar-havronskyi-663509240/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/nhavronskyi/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a class="social-icon" href="https://github.com/nhavronskyi"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center bg-light-blue-grey p-5 order-2 text-center">
+
+            <div class="col-md-10 col-lg-8">
+                <h2 class="font-mono display-3 mb-5">
+                    &lt;/About Me&gt;
+                </h2>
+
+                <p class="fs-6 lh-lg mb-5 text-dark">
+                    I'm Software Engineer with
+                    <span id="experience">
+                        <script>document.getElementById('experience').textContent = calculateYearsOfExperience()</script>
+                    </span>
+                    years of experience in AI/ML and Java Software Development.
+                    I'm eager to be a part of a team that values others and loves it's product.
+                    I'm skilled in developing plans, idea generations, engineering and maintaining projects.
+                </p>
+
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <a class="btn btn-custom text-decoration-none" href="/pages/404/">Resume</a>
+                    <a class="btn btn-custom text-decoration-none" href="/pages/404/">Portfolio</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
