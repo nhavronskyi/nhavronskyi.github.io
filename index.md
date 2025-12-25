@@ -1,5 +1,4 @@
-# Your Name
-Nazar Havronskyi
+# Nazar Havronskyi
 
 ## About
 Short professional summary.
