@@ -1,23 +1,24 @@
 ---
 layout: default
+title: About me
 ---
 
 # Nazar Havronskyi
 
 ## About
-Short professional summary.
+Here you can learn more about me!
 
 ## Experience
-**Job Title** — Company  
-Dates  
+Java Software Engineer - DataArt
+Dates 01.03.2025 - now
 Key achievements
 
 ## Education
-Degree — University
+Degree — Bachelors University
 
 ## Skills
-- Skill 1
-- Skill 2
+- Java
+- Spring Boot
 
 ## Contact
 - Email: nhavronskyi@gmail.com
