@@ -13,7 +13,7 @@ title: Nazar Havronskyi - Resume
             <h1 class="font-mono">Nazar Havronskyi_</h1>
             <p>Software Engineer Java &amp; AI</p>
         </div>
-        <button class="btn btn-custom" onclick="window.print()">
+        <button class="btn btn-custom" id="download-cv-btn" onclick="downloadCV()">
             <i class="fa-solid fa-download me-2"></i>Download CV
         </button>
     </div>
@@ -143,3 +143,22 @@ title: Nazar Havronskyi - Resume
     </div>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+function downloadCV() {
+    var btn = document.getElementById('download-cv-btn');
+    btn.style.display = 'none';
+    html2pdf()
+        .set({
+            margin: 10,
+            filename: 'Nazar_Havronskyi.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        })
+        .from(document.querySelector('.resume-page'))
+        .save()
+        .then(function () { btn.style.display = ''; });
+}
+</script>
