@@ -51,7 +51,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px 20px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #444;
 }
 
@@ -73,14 +73,14 @@
 
 /* Sections */
 .cv-section {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 }
 
 .cv-section h2 {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.03em;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     padding: 10px 16px;
     background-color: #f0fdfa;
     border-left: 3px solid #0d9488;
@@ -109,28 +109,28 @@
 }
 
 .cv-entry-header h3 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
     color: #111;
 }
 
 .cv-entry-header .date {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #0d9488;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .cv-entry .client {
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     color: #555;
     margin-bottom: 8px;
 }
 
 .cv-entry .role-tag {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #0d9488;
     background: #f0fdfa;
     padding: 2px 10px;
@@ -140,7 +140,7 @@
 }
 
 .cv-entry p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 8px;
     color: #222;
@@ -152,7 +152,7 @@
 }
 
 .cv-entry ul li {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: #222;
     margin-bottom: 2px;
@@ -160,7 +160,7 @@
 
 /* Tech tags (for meta lines) */
 .cv-entry .meta {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #444;
     margin-top: 8px;
 }
@@ -169,36 +169,23 @@
     font-weight: 600;
 }
 
-/* Skills grid with pills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
+/* Skills list */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.skill-group h4 {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
+.skills-list li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #222;
+    padding: 4px 0;
+}
+
+.skills-list li strong {
     color: #0d9488;
-}
-
-.skill-group .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.skill-tag {
-    display: inline-block;
-    padding: 3px 10px;
-    background: #f0fdfa;
-    border: 1px solid #ccfbf1;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    color: #333;
+    font-weight: 700;
 }
 
 /* Summary list */
@@ -209,7 +196,7 @@
 }
 
 .summary-list li {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: #222;
     padding: 8px 0 8px 16px;
@@ -248,12 +235,12 @@
     }
 
     .cv-header {
-        margin-bottom: 20px;
-        padding-bottom: 14px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
     }
 
     .cv-section {
-        margin-bottom: 18px;
+        margin-bottom: 10px;
     }
 
     .cv-section h2 {
@@ -262,27 +249,28 @@
         color: #0d9488 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
+        padding: 6px 12px;
         break-after: avoid;
         page-break-after: avoid;
     }
 
     .cv-entry {
-        margin-bottom: 14px;
-        break-inside: avoid;
-        page-break-inside: avoid;
+        margin-bottom: 6px;
+        padding-bottom: 6px;
     }
 
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
+    .cv-entry p {
+        margin-bottom: 4px;
     }
 
-    .skill-tag {
-        background-color: #f0fdfa !important;
-        border-color: #ccfbf1 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+    .cv-entry ul {
+        margin-bottom: 4px;
+    }
+
+    .summary-list li {
+        padding: 4px 0 4px 12px;
+        margin-bottom: 4px;
     }
 
     a {
