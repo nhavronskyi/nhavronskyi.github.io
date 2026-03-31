@@ -1,9 +1,10 @@
 body {
     margin: 0;
-
     padding: 0;
-
     min-height: 100vh;
-
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+}
+
+.font-mono {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
 }
