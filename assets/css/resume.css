@@ -1,0 +1,232 @@
+.resume-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #000;
+}
+
+.resume-header-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.resume-header-text p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.resume-section {
+    margin-bottom: 40px;
+}
+
+.resume-section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    background-color: #eef1f5;
+}
+
+.resume-entry {
+    margin-bottom: 28px;
+}
+
+.resume-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.resume-entry-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.resume-entry-header .date {
+    font-size: 0.875rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+.resume-entry .client {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.resume-entry p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.resume-entry ul {
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.resume-entry ul li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 2px;
+}
+
+.resume-entry .meta {
+    font-size: 0.875rem;
+    color: #444;
+    margin-top: 6px;
+}
+
+.resume-entry .meta strong {
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.skill-group h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.skill-group p {
+    font-size: 0.875rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summary-list li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #222;
+    padding: 8px 0;
+    padding-left: 16px;
+    border-left: 3px solid #000;
+    margin-bottom: 10px;
+}
+
+.summary-list li strong {
+    font-weight: 700;
+}
+
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    #download-cv-btn {
+        display: none !important;
+    }
+
+    .resume-page {
+        max-width: 100%;
+        padding: 10mm 15mm;
+        margin: 0;
+    }
+
+    .resume-header {
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+    }
+
+    .resume-section {
+        margin-bottom: 20px;
+    }
+
+    .resume-section h2 {
+        background-color: #eef1f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        margin-bottom: 12px;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .resume-entry {
+        margin-bottom: 16px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .resume-entry p,
+    .resume-entry ul li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .summary-list li {
+        padding: 4px 0 4px 16px;
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .resume-page {
+        padding: 32px 20px;
+    }
+
+    .resume-header {
+        flex-direction: column;
+    }
+
+    .resume-entry-header {
+        flex-direction: column;
+    }
+}
