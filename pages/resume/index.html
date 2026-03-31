@@ -13,7 +13,8 @@ title: Nazar Havronskyi - Resume
             <h1 class="font-mono">Nazar Havronskyi_</h1>
             <p>Software Engineer Java &amp; AI</p>
         </div>
-        <button class="btn btn-custom" id="download-cv-btn" onclick="downloadCV()">
+        <button class="btn btn-custom" id="download-cv-btn"
+                title="In the print dialog, select 'Save as PDF' and uncheck 'Headers and footers'">
             <i class="fa-solid fa-download me-2"></i>Download CV
         </button>
     </div>
@@ -144,21 +145,23 @@ title: Nazar Havronskyi - Resume
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-function downloadCV() {
-    var btn = document.getElementById('download-cv-btn');
-    btn.style.display = 'none';
-    html2pdf()
-        .set({
-            margin: 10,
-            filename: 'Nazar_Havronskyi.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2, useCORS: true },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        })
-        .from(document.querySelector('.resume-page'))
-        .save()
-        .then(function () { btn.style.display = ''; });
-}
+    (function () {
+        // Remove Jekyll front matter if visible (file opened without Jekyll)
+        document.body.childNodes.forEach(function (node) {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('---')) {
+                node.textContent = '';
+            }
+        });
+
+        var btn = document.getElementById('download-cv-btn');
+        var originalTitle = document.title;
+        btn.addEventListener('click', function () {
+            document.title = 'Nazar_Havronskyi_CV';
+            window.print();
+        });
+        window.addEventListener('afterprint', function () {
+            document.title = originalTitle;
+        });
+    })();
 </script>

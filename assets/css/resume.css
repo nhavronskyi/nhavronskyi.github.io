@@ -145,6 +145,78 @@
 }
 
 
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    #download-cv-btn {
+        display: none !important;
+    }
+
+    .resume-page {
+        max-width: 100%;
+        padding: 10mm 15mm;
+        margin: 0;
+    }
+
+    .resume-header {
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+    }
+
+    .resume-section {
+        margin-bottom: 20px;
+    }
+
+    .resume-section h2 {
+        background-color: #eef1f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        margin-bottom: 12px;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .resume-entry {
+        margin-bottom: 16px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .resume-entry p,
+    .resume-entry ul li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .summary-list li {
+        padding: 4px 0 4px 16px;
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
+
 @media (max-width: 600px) {
     .resume-page {
         padding: 32px 20px;
