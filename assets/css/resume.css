@@ -144,6 +144,52 @@
     font-weight: 700;
 }
 
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 15mm;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .resume-page {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resume-header button {
+        display: none;
+    }
+
+    .resume-section h2,
+    .summary-list li {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .resume-entry,
+    .resume-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
+
 @media (max-width: 600px) {
     .resume-page {
         padding: 32px 20px;
