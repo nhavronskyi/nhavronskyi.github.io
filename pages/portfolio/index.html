@@ -1,0 +1,83 @@
+---
+layout: default
+title: Nazar Havronskyi - Portfolio
+---
+
+<link href='/assets/css/landing.css' rel="stylesheet">
+<link href='/assets/css/cv.css' rel="stylesheet">
+<link href='/assets/css/portfolio.css' rel="stylesheet">
+
+<div class="cv-page">
+
+    <a href="/pages/home/" class="cv-back">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+
+    <div class="cv-header">
+        <div class="cv-header-text">
+            <h1 class="font-mono">Portfolio_</h1>
+            <p>Selected projects</p>
+        </div>
+    </div>
+
+    <div class="portfolio-grid">
+
+        <article class="project-card">
+            <div class="project-media">
+                <img alt="Progress Me sign-in screen" loading="lazy"
+                     src="/assets/images/projects/progress-me/screenshot.png">
+            </div>
+            <div class="project-body">
+                <div class="project-heading">
+                    <h3>Progress Me</h3>
+                    <span class="date">2025 – present</span>
+                </div>
+                <p>A journaling platform with predictive burnout analysis — tracks mood, energy, and goals to surface
+                    patterns and provide personalized recommendations.</p>
+                <ul class="project-highlights">
+                    <li>Full-stack platform on Spring Boot, PostgreSQL, and React.ts with real-time analytics
+                        dashboards.
+                    </li>
+                    <li>Mood and energy tracking with live data visualization via Chart.js.</li>
+                    <li>Google GenAI integration for predictive burnout detection and goal recommendations.</li>
+                    <li>Redis caching layer for AI inference results, achieving sub-200ms API response times.</li>
+                </ul>
+                <div class="tech-tags">
+                    <span>Spring Boot</span>
+                    <span>PostgreSQL</span>
+                    <span>Redis</span>
+                    <span>React.ts</span>
+                    <span>Google GenAI</span>
+                    <span>Docker</span>
+                    <span>GCP</span>
+                    <span>AWS EC2</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-media project-media-icon">
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div class="project-body">
+                <div class="project-heading">
+                    <h3>Telegram Community Bot</h3>
+                    <span class="date">2025 – 2026</span>
+                </div>
+                <p>A long-polling Telegram bot serving 40+ users in an open coders community, with a companion web
+                    dashboard for configuration and analytics.</p>
+                <ul class="project-highlights">
+                    <li>Customizable notification preferences and bot interaction flows for smoother engagement.</li>
+                    <li>React dashboard for bot configuration and community analytics.</li>
+                    <li>Spring Boot backend with Telegram API integration, ensuring reliable message delivery.</li>
+                </ul>
+                <div class="tech-tags">
+                    <span>Spring Boot</span>
+                    <span>React</span>
+                    <span>Telegram API</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</div>
