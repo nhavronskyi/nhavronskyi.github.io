@@ -10,34 +10,3 @@ body {
 .font-mono {
   font-family: "SF Mono", "Fira Code", "Consolas", "Monaco", monospace;
 }
-
-.site-brand {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1030;
-  line-height: 0;
-}
-
-.site-brand img {
-  height: 30px;
-  width: auto;
-  display: block;
-}
-
-@media print {
-  .site-brand {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .site-brand {
-    top: 14px;
-    left: 14px;
-  }
-
-  .site-brand img {
-    height: 24px;
-  }
-}

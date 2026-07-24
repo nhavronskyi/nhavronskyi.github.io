@@ -18,7 +18,7 @@
 .cv-page {
   max-width: 860px;
   margin: 0 auto;
-  padding: 76px 40px 60px;
+  padding: 40px 40px 60px;
 }
 
 /* Header */
@@ -281,7 +281,7 @@
 
 @media (max-width: 600px) {
   .cv-page {
-    padding: 60px 16px 24px;
+    padding: 24px 16px;
   }
 
   .cv-header {
