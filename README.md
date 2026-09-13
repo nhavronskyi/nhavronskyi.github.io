@@ -1,3 +1,3 @@
 Here you can read more about me!
 
-site link: https://nhavronskyi.github.io/
+site link: https://nhavronskyi.dev/
