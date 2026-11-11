@@ -187,6 +187,17 @@
   border-radius: 8px;
   background: #fff;
   overflow: hidden;
+  position: relative;
+}
+
+.cert-card:has(.stretched-link) {
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.cert-card:has(.stretched-link):hover {
+  border-color: #1e3a5f;
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.12);
 }
 
 /* Show only the badge image from Credly's 150x270 embed */
@@ -230,7 +241,7 @@
   text-decoration: none;
 }
 
-a.cert-title:hover {
+.cert-card:hover a.cert-title {
   text-decoration: underline;
 }
 
@@ -358,6 +369,44 @@ a.cert-title:hover {
   a {
     color: inherit !important;
     text-decoration: none !important;
+  }
+
+  /* Compact certification cards on paper */
+  .cert-row {
+    gap: 6px;
+  }
+
+  .cert-card {
+    min-height: 0;
+    gap: 12px;
+    border-color: #d9dee5 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .cert-badge-crop,
+  .cert-icon {
+    flex-basis: 64px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .cert-badge-crop iframe {
+    transform: scale(0.44);
+    transform-origin: top left;
+  }
+
+  .cert-icon {
+    font-size: 1.6rem;
+  }
+
+  .cert-title {
+    font-size: 1rem;
+  }
+
+  .cert-info {
+    gap: 2px;
   }
 }
 
